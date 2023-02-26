@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es2021",
+        "module": "es2020",
+        "sourceMap": true,
+        "outDir": "./build",
+        "rootDir": "./",
+        "removeComments": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node"
+    }
+}
