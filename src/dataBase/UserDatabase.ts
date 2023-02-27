@@ -2,11 +2,11 @@ import { IUserDB, User } from "../models/User"
 import  BaseDatabase  from './BaseDataBase'
 
 export class UserDatabase extends BaseDatabase {
-    public static TABLE_USERS = "Amaro_users"
+    public static TABLE_USERS = "users"
 
     toUserDBModel = (user: User) => {
         const userDB: IUserDB = {
-            id: user.getId(),
+            id_user: user.getId(),
             name: user.getName(),
             email: user.getEmail(),
             password: user.getPassword(),
@@ -22,7 +22,7 @@ export class UserDatabase extends BaseDatabase {
             .select()
             .where({ email })
 
-        return userDB[0]
+        return userDB[0] 
     }
 
     insertUser = async (user: User) => {

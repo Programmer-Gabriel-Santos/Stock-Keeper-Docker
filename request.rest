@@ -1,8 +1,23 @@
-POST http://localhost:3003/users/signup
+
+GET http://localhost:3004/user/teste
+
+####
+
+POST http://localhost:3004/user/signup
 Content-Type: application/json
 
 {   
     "name": "Gabriel",
+    "email": "gabriel@gmail.com",
+    "password": "123456"
+}
+
+####
+
+POST http://localhost:3005/user/login
+Content-Type: application/json
+
+{
     "email": "gabriel@gmail.com",
     "password": "123456"
 }
