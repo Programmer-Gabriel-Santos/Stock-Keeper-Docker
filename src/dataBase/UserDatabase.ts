@@ -17,7 +17,6 @@ export class UserDatabase extends BaseDatabase {
     }
 
     findByEmail = async (email: string): Promise<IUserDB> => {
-
         const userDB: IUserDB[] = await this.getConnection()(UserDatabase.TABLE_USERS)
             .select()
             .where({ email })

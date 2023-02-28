@@ -1,17 +1,34 @@
+import * as fs from 'fs';
+import * as xml2js from 'xml2js';
+
+
 export interface IProduct {
     id: string,
     name: string,
     price: number,
-    description: string,
+    description: string | null,
     idUser: string
+}
+
+export interface IProductInputDTO {
+    name: string,
+    price: number,
+    description: string | null,
+    idUser: string,
+    tags: string[], 
+    token: string | null
 }
 
 export interface IProductDB {
     id: string,
     name: string,
     price: number,
-    description: string,
+    description: string | null,
     id_user: string
+}
+
+export interface InsertOutputDTO {
+    message: string
 }
 
 export class Product {
@@ -19,7 +36,7 @@ export class Product {
         private id: string,
         private name: string,
         private price: number,
-        private description: string,
+        private description: string | null,
         private idUser: string
     ) { }
 
@@ -67,5 +84,13 @@ export class Product {
             product.description,
             product.idUser
         )
+    }
+
+    static transformProductsToJSON = (product: unknown) => {
+        
+    }
+
+    static verifyProductFormat = (product: unknown) => {
+        
     }
 }

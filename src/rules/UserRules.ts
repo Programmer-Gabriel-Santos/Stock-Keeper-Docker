@@ -2,7 +2,7 @@ import { UserDatabase } from '../dataBase/UserDatabase'
 import { AuthenticationError } from "../errors/AuthenticationError"
 import { EmailInvalid } from "../errors/EmailInvalid"
 import { ParamsError } from "../errors/ParamsError"
-import { UnauthorizedError } from "../errors/UnauthorizedError"
+import { AuthorizationError } from '../errors/AuthorizationError'
 import { LoginInputDTO, LoginOutputDTO, SignupInputDTO, SignupOutputDTO, User, USER_ROLES } from "../models/User"
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
@@ -103,7 +103,7 @@ export class UserRules {
         const isPasswordIsCorrect = await this.hashManager.compare(password, user.getPassword())
 
         if(!isPasswordIsCorrect){
-            throw new UnauthorizedError()
+            throw new AuthorizationError()
         }
 
         const payload: ITokenPayload = {

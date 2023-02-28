@@ -20,7 +20,6 @@ export class UserController {
             res.status(201).send(response)
 
         } catch (error: unknown) {
-                console.log(error)
             if (error instanceof Error) {
                 res.status(400).send({ message: error.message })
             } else {
