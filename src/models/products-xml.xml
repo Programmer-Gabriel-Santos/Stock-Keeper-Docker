@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <id>1</id>
+    <name>Camiseta Feminina</name>
+    <price>49.99</price>
+    <description>Camiseta de algodão com estampa floral</description>
+    <idUser>1234</idUser>
+    <tags>
+      <tag>Roupas</tag>
+      <tag>Feminino</tag>
+      <tag>Verão</tag>
+    </tags>
+  </product>
+  <product>
+    <id>2</id>
+    <name>Tênis Esportivo</name>
+    <price>129.90</price>
+    <description>Tênis para corrida com amortecimento de ar</description>
+    <idUser>5678</idUser>
+    <tags>
+      <tag>Calçados</tag>
+      <tag>Esportivo</tag>
+      <tag>Corrida</tag>
+    </tags>
+  </product>
+  <product>
+    <id>3</id>
+    <name>Smartphone Android</name>
+    <price>899.00</price>
+    <description>Smartphone com tela de 6 polegadas e câmera de 64MP</description>
+    <idUser>9012</idUser>
+    <tags>
+      <tag>Tecnologia</tag>
+      <tag>Android</tag>
+      <tag>Celular</tag>
+    </tags>
+  </product>
+  <product>
+    <id>4</id>
+    <name>Camisa Social Masculina</name>
+    <price>89.99</price>
+    <description>Camisa social de manga longa com tecido respirável</description>
+    <idUser>3456</idUser>
+    <tags>
+      <tag>Roupas</tag>
+      <tag>Masculino</tag>
+      <tag>Social</tag>
+    </tags>
+  </product>
+  <product>
+    <id>5</id>
+    <name>Óculos de Sol</name>
+    <price>69.90</price>
+    <description>Óculos de sol com armação de acetato e lentes polarizadas</description>
+    <idUser>7890</idUser>
+    <tags>
+      <tag>Acessórios</tag>
+      <tag>Óculos</tag>
+      <tag>Sol</tag>
+    </tags>
+  </product>
+  <product>
+    <id>6</id>
+    <name>Caixa de Som Bluetooth</name>
+    <price>149.00</price>
+    <description>Caixa de som com conectividade Bluetooth e bateria recarregável</description>
+    <idUser>1234</idUser>
+    <tags>
+      <tag>Tecnologia</tag>
+      <tag>Áudio</tag>
+      <tag>Bluetooth</tag>
+    </tags>
+  </product>
+  <product>
+    <id>7</id>
+    <name>Shorts Masculino</name>
+    <price>59.99</price>
+    <description>Shorts masculino com estampa tropical</description>
+    <idUser>5678</idUser>
+    <tags>
+      <tag>Roupas</tag>
+      <tag>Masculino</tag>
+      <tag>Tropical</tag>
+    </tags>
+  </product>
+  <product>
+    <id>8</

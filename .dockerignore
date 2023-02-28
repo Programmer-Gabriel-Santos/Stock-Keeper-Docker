@@ -1,0 +1,6 @@
+node_modules
+jest.config.ts
+package-lock.json
+request.rest
+.gitignore
+rascunho

@@ -3,8 +3,29 @@ export enum USER_ROLES {
     ADMIN = "ADMIN"
 }
 
+export interface SignupInputDTO {
+    name: string,
+    email: string,
+    password: string
+}
+
+export interface SignupOutputDTO {
+    message: string,
+    token: string
+}
+
+export interface LoginInputDTO{
+    email: string,
+    password: string
+}
+
+export interface LoginOutputDTO {
+    message: string,
+    token: string
+}
+
 export interface IUserDB {
-    id: string,
+    id_user: string,
     name: string,
     email: string,
     password: string,
@@ -61,25 +82,4 @@ export class User {
     public setPassword = (newPassword: string) => {
         this.password = newPassword
     }
-}
-
-export interface SignupInputDTO {
-    name: string,
-    email: string,
-    password: string
-}
-
-export interface SignupOutputDTO {
-    message: string,
-    token: string
-}
-
-export interface LoginInputDTO{
-    email: string,
-    password: string
-}
-
-export interface LoginOutputDTO {
-    message: string,
-    token: string
 }

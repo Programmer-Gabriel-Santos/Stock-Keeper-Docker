@@ -1,0 +1,1 @@
+crie 10 produtos aleatórios com os seguintes campos em xml: name, price, description, idUser, tags: string[]

@@ -1,14 +1,14 @@
-import { UserDatabase } from "../database/UserDatabase"
+import { UserDatabase } from '../dataBase/UserDatabase'
 import { AuthenticationError } from "../errors/AuthenticationError"
 import { EmailInvalid } from "../errors/EmailInvalid"
 import { ParamsError } from "../errors/ParamsError"
-import { UnauthorizedError } from "../errors/UnauthorizedError"
+import { AuthorizationError } from '../errors/AuthorizationError'
 import { LoginInputDTO, LoginOutputDTO, SignupInputDTO, SignupOutputDTO, User, USER_ROLES } from "../models/User"
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
 import { IdGenerator } from "../services/IdGenerator"
 
-export class UserBusiness {
+export class UserRules {
     constructor(
         private userDatabase: UserDatabase,
         private idGenerator: IdGenerator,
@@ -53,7 +53,7 @@ export class UserBusiness {
             name,
             email,
             hashedPassword,
-            USER_ROLES.NORMAL
+            USER_ROLES.ADMIN
         )
 
         await this.userDatabase.insertUser(user)
@@ -103,7 +103,7 @@ export class UserBusiness {
         const isPasswordIsCorrect = await this.hashManager.compare(password, user.getPassword())
 
         if(!isPasswordIsCorrect){
-            throw new UnauthorizedError()
+            throw new AuthorizationError()
         }
 
         const payload: ITokenPayload = {

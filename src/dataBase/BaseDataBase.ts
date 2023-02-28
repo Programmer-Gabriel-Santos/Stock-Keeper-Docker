@@ -11,7 +11,7 @@ class BaseDataBase {
     protected getConnection() {
         if (!this.connetion) {
             this.connetion = knex({
-                client: "mysql",
+                client: "mysql2",
                 connection: {
                     host: process.env.DB_HOST,
                     user: process.env.DB_USER,
@@ -26,9 +26,3 @@ class BaseDataBase {
     }
 }
 export default BaseDataBase
-
-
-
-
-
-
