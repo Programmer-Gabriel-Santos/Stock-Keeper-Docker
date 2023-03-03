@@ -1,6 +1,4 @@
-import * as fs from 'fs';
-import * as xml2js from 'xml2js';
-
+import * as xml2js from 'xml2js'
 
 export interface IProduct {
     id: string,
@@ -10,24 +8,34 @@ export interface IProduct {
     idUser: string
 }
 
+export interface ITag {
+    idProduct: string,
+    tag: string
+}
+
+export interface ITagDB{
+    id_product: string,
+    tag: string
+}
+
 export interface IProductInputDTO {
     name: string,
     price: number,
     description: string | null,
     idUser: string,
-    tags: string[], 
-    token: string | null
+    tags: ITag[],
+    token: string
 }
 
 export interface IProductDB {
-    id: string,
+    id_product: string,
     name: string,
     price: number,
     description: string | null,
     id_user: string
 }
 
-export interface InsertOutputDTO {
+export interface IOutputDTO {
     message: string
 }
 
@@ -37,7 +45,7 @@ export class Product {
         private name: string,
         private price: number,
         private description: string | null,
-        private idUser: string
+        private idUser: string,
     ) { }
 
     public getId = () => {
@@ -86,11 +94,33 @@ export class Product {
         )
     }
 
-    static transformProductsToJSON = (product: unknown) => {
-        
+    static tagObjectModeling = (tags: any) => {
+        const objTags = tags.tag.map((tag: any) => ({ tag: tag }))
+        return objTags
     }
 
-    static verifyProductFormat = (product: unknown) => {
-        
+    static XmlForObject = async (product: any): Promise<any> => {
+
+        let modifiedObject = {}
+    
+        const xmlToObject = await xml2js.parseStringPromise(product, { explicitArray: false })
+        // console.log("parse:::::",xmlToObject)
+        const tags = this.tagObjectModeling(xmlToObject.product.tags)
+        // console.log("tag:::::", tags)
+        modifiedObject = {
+            
+        }
     }
+
+    static verifyProductFormat = (product: any): string => {
+        // console.log(product, "verify")
+        
+        const productStr = String(product)
+
+        if (productStr.match(/[^\u0000-\u007F]/g)) {
+            return 'xml'
+        }
+        return 'json'
+    }
+
 }

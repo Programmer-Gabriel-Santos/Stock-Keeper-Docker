@@ -11,6 +11,7 @@ export interface ITokenPayload {
 
 export class Authenticator {
     generateToken = (payload: ITokenPayload): string => {
+                
         const token = jwt.sign(
             payload,
             process.env.JWT_KEY as string,
@@ -23,10 +24,11 @@ export class Authenticator {
     }
 
     getTokenPayload = (token: string): ITokenPayload | null => {
+        const JWT_KEY = process.env.JWT_KEY as string
         try {
             const payload = jwt.verify(
                 token,
-                process.env.JWT_KEY as string
+                JWT_KEY
             )
 
             return payload as ITokenPayload

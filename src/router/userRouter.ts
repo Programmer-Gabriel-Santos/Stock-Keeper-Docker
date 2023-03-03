@@ -18,7 +18,7 @@ const userController = new UserController(
 )
 
 userRouter.get("/teste", (req, res) => {
-    console.log("teste!!!!!!!!!!!!!!")
+    // console.log("teste!!!!!!!!!!!!!!")
     res.status(200).send({ message: "O teste funcionou!!!!!!" })  
 })
 

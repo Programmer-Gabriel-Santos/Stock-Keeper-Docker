@@ -9,6 +9,7 @@ export class HashManager {
         return hash
     }
 
+    
     public compare = async (plaintext: string, hash: string): Promise<boolean> => {
         return bcrypt.compare(plaintext, hash)
     }
