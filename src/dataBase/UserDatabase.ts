@@ -24,7 +24,7 @@ export class UserDatabase extends BaseDatabase {
         return userDB[0] 
     }
 
-    insertUser = async (user: User) => {
+    insertUser = async (user: User): Promise<void> => {
         const userDB = this.toUserDBModel(user)
 
         await this.getConnection()(UserDatabase.TABLE_USERS)
