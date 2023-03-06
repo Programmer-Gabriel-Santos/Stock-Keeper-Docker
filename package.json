@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "dev": "ts-node-dev ./src/index.ts",
-    "build": "tsc",
-    "start": "node ./src/index.ts"
+    "build": "tsc ./src",
+    "start": "node ./build/src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +29,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@types/knex": "^0.16.1",
     "bcryptjs": "^2.4.3",
     "body-parser-xml": "^2.0.3",
     "cors": "^2.8.5",

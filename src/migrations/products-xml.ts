@@ -1,3 +1,7 @@
+// OBS: esses produtos são os mesmos que estão no arquivo products-json.ts,
+// certifique-se de usar produtos ainda não cadastrados nas requisições.
+
+const productsXml =`
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
   <product>
@@ -84,4 +88,5 @@
       <tag>Tropical</tag>
     </tags>
   </product>
-</products>
+</products> 
+`
