@@ -1,23 +1,36 @@
 import { ProductDataBase } from "../dataBase/ProductDataBase"
-import { IOutputDTO, IProductInputDTO, ITagDB, Product } from "../models/Products"
+import { IOutputDTO, IProductInputDTO, ITag, ITagDB, Product } from "../models/Products"
 import { ParamsError } from "../errors/ParamsError"
 import { ConflictError } from "../errors/ConflictError"
 import { IdGenerator } from "../services/IdGenerator"
 import { Authenticator } from "../services/Authenticator"
 import { AuthorizationError } from "../errors/AuthorizationError"
 import { AuthenticationError } from "../errors/AuthenticationError"
+import { ProductDataBaseMock } from "../../tests/Mocks/ProductDataBaseMock/ProductDataBaseMock"
+import { AuthenticatorMock } from "../../tests/Mocks/servicesMock/AuthenticatorMock"
+import { IdGeneratorMock } from "../../tests/Mocks/servicesMock/idGeneratorMock"
 
 export class ProductRules {
     constructor(
-        private productDatabase: ProductDataBase,
+        private productDataBase: ProductDataBase,
         private idGenerator: IdGenerator,
-        private authenticator: Authenticator
+        private authenticator: Authenticator,
+        //          ---------------------
+        //    // Mocks:
+        // private productDataBase: ProductDataBaseMock,
+        // private idGenerator: IdGeneratorMock,
+        // private authenticator: AuthenticatorMock,
+
     ) { }
 
-    createProduct = async (input: IProductInputDTO | any) => {
+    //      // para o teste funcionar comente o método createProduct e descomente o método createProductTest,
+    //      // para que o teste de erros funcionem corretamente
 
+    // createProductTest = async(input: any) =>{
+
+    createProduct = async (input: IProductInputDTO) => {
         let { name, price, description, idUser, tags, token } = input
-
+        
         if (!name || !price || !idUser || !tags || !token) {
             throw new ParamsError()
         }
@@ -40,7 +53,7 @@ export class ProductRules {
             throw new AuthorizationError()
         }
 
-        const productDB = await this.productDatabase.findByName(name)
+        const productDB = await this.productDataBase.findByName(name)
 
         if (productDB) {
             throw new ConflictError()
@@ -48,14 +61,17 @@ export class ProductRules {
 
         const idProduct = this.idGenerator.generate()
 
-        if (!Array.isArray(tags) && tags.tag.length < 2) {
+        if (!Array.isArray(tags) && !Array.isArray(tags.tag) && typeof tags.tag !== "string") {
             throw new ParamsError()
 
-        } if (!Array.isArray(tags)) {
+        } if (!Array.isArray(tags) && typeof tags.tag !== "string") {
             tags = tags.tag.map((tag: string) => ({ tag: tag, idProduct }))
-            
-        } else {
+
+        } if (Array.isArray(tags)) {
             tags = tags.map((tag: any) => ({ tag: tag.tag, idProduct }))
+
+        } if (typeof tags.tag === "string") {
+            tags = { tag: tags.tag, idProduct }
         }
 
         const newProduct = new Product(
@@ -68,15 +84,19 @@ export class ProductRules {
 
         const productDBModel = ProductDataBase.toProductDBModel(newProduct)
 
-        await this.productDatabase.insertProduct(productDBModel)
+        await this.productDataBase.insertProduct(productDBModel)
 
-        const tagsDBModel: ITagDB[] = tags.map((tag: string) => {
-            return ProductDataBase.toTagDBModel(tag)
-        })
+        if (Array.isArray(tags)) {
+            tags = tags.map((tag: ITag)=> ProductDataBase.toTagDBModel(tag))
 
-        tagsDBModel.forEach(async (tagDB: ITagDB) => {
-            await this.productDatabase.insertTag(tagDB)
-        })
+            await this.productDataBase.insertTag(tags)
+        }
+        
+        if(tags.tag == "string"){  
+            tags = ProductDataBase.toTagDBModel(tags)
+
+            await this.productDataBase.insertTag(tags)
+        }
 
         const response: IOutputDTO = {
             message: "Produto cadastrado com sucesso!"

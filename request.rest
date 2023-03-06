@@ -28,12 +28,12 @@ Content-Type: application/json
 
 POST http://localhost:3003/product/add
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiMzk0Y2E3LWZjM2ItNDRkZC05Y2UwLTdiYmJkNGY2YzI3MyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3Nzg0MjgyOCwiZXhwIjoxNjc3OTI5MjI4fQ.ZTWZm1CZhwj2QabwpBzTkTvltYPWQVxjqhAWaG70iaU
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliZTA2MjBjLWVjMDItNGJmMy05ZDgxLWMyNDRmYzVhNDNjMyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3ODEwNTk2MiwiZXhwIjoxNjc4MTkyMzYyfQ.yvedQXaV6suCluvR06xbqQfc46gI4O3Ock3bsv75x-0
 
 {
     "product": {
         "id": "1",
-        "name": "Camiseta infantil",
+        "name": "Camiseta Masculina",
         "price": 49.99,
         "description": "Camiseta de seda com estampa floral",
         "idUser": "9be0620c-ec02-4bf3-9d81-c244fc5a43c3",
@@ -50,7 +50,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiMzk0Y2E3LWZjM2It
 
 POST http://localhost:3003/product/add
 Content-Type: text/xml
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiMzk0Y2E3LWZjM2ItNDRkZC05Y2UwLTdiYmJkNGY2YzI3MyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3Nzg0MjgyOCwiZXhwIjoxNjc3OTI5MjI4fQ.ZTWZm1CZhwj2QabwpBzTkTvltYPWQVxjqhAWaG70iaU
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliZTA2MjBjLWVjMDItNGJmMy05ZDgxLWMyNDRmYzVhNDNjMyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3ODEwNTk2MiwiZXhwIjoxNjc4MTkyMzYyfQ.yvedQXaV6suCluvR06xbqQfc46gI4O3Ock3bsv75x-0
 
 
 
@@ -58,12 +58,12 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiMzk0Y2E3LWZjM2It
 
 <product>
     <id>1</id>
-    <name>Camiseta Feminina</name>
+    <name>Camiseta Feminina de manga longa</name>
     <price>49.99</price>
     <description>Camiseta de algodão com estampa floral</description>
     <idUser>9be0620c-ec02-4bf3-9d81-c244fc5a43c3</idUser>
     <tags>
-         <tag>Roupas</tag>
+        <tag>Roupas</tag>
         <tag>Feminino</tag>
         <tag>Verão</tag>
     </tags>

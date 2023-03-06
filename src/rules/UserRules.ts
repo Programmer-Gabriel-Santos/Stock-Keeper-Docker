@@ -7,14 +7,31 @@ import { LoginInputDTO, LoginOutputDTO, SignupInputDTO, SignupOutputDTO, User, U
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
 import { IdGenerator } from "../services/IdGenerator"
+import { IdGeneratorMock } from '../../tests/Mocks/servicesMock/idGeneratorMock'
+import { UserDataBaseMock } from '../../tests/Mocks/UserDataBaseMock/UserDataBaseMock'
+import { HashManagerMock } from '../../tests/Mocks/servicesMock/HashManagerMock'
+import { AuthenticatorMock } from '../../tests/Mocks/servicesMock/AuthenticatorMock'
+import { IsEmailExist } from '../errors/IsEmailExist'
 
 export class UserRules {
     constructor(
         private userDatabase: UserDatabase,
         private idGenerator: IdGenerator,
         private hashManager: HashManager,
-        private authenticator: Authenticator
+        private authenticator: Authenticator,
+        //      -----------------------
+        // Mocks:
+        // private userDatabase: UserDataBaseMock,
+        // private idGenerator: IdGeneratorMock,
+        // private hashManager: HashManagerMock,
+        // private authenticator: AuthenticatorMock
+
     ) {}
+
+            // // trocar o método login por loginTest para que os testes de erro funcionem
+
+            // signupTest = async (input: any) => {
+                
 
     signup = async(input: SignupInputDTO) =>{
         const {name, email, password} = input
@@ -36,13 +53,13 @@ export class UserRules {
         }
 
         if (typeof password !== "string" || password.length < 6) {
-            throw new AuthenticationError()
+            throw new ParamsError()
         } 
 
         const userDB = await this.userDatabase.findByEmail(email)
         
         if(userDB){
-            throw new Error("Email já cadastrado") 
+            throw new IsEmailExist() 
         }
 
         const id = this.idGenerator.generate()
@@ -72,6 +89,10 @@ export class UserRules {
 
         return response
     }
+       // // trocar o método login por loginTest para que os testes de erro funcionem
+
+    // loginTest = async (input: any) => {
+        
 
     login = async(input: LoginInputDTO)=>{
         const {email, password} = input
@@ -88,7 +109,7 @@ export class UserRules {
             throw new EmailInvalid()
         }
 
-        if (typeof password !== "string" || password.length < 3) {
+        if (typeof password !== "string" || password.length < 6) {
             throw new AuthenticationError()
         }
 
