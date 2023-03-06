@@ -106,34 +106,4 @@ export class Product {
             product.idUser
         )
     }
-
-    static tagObjectModeling = (tags: any) => {
-        const objTags = tags.tag.map((tag: any) => ({ tag: tag }))
-        return objTags
-    }
-
-    static XmlForObject = async (product: any): Promise<any> => {
-
-        let modifiedObject = {}
-    
-        const xmlToObject = await xml2js.parseStringPromise(product, { explicitArray: false })
-        // console.log("parse:::::",xmlToObject)
-        const tags = this.tagObjectModeling(xmlToObject.product.tags)
-        // console.log("tag:::::", tags)
-        modifiedObject = {
-            
-        }
-    }
-
-    static verifyProductFormat = (product: any): string => {
-        // console.log(product, "verify")
-        
-        const productStr = String(product)
-
-        if (productStr.match(/[^\u0000-\u007F]/g)) {
-            return 'xml'
-        }
-        return 'json'
-    }
-
 }
