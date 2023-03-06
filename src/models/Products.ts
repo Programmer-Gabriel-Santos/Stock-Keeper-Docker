@@ -1,12 +1,5 @@
 import * as xml2js from 'xml2js'
 
-export interface IProduct {
-    id: string,
-    name: string,
-    price: number,
-    description: string | null,
-    idUser: string
-}
 
 export interface ITag {
     idProduct: string,
@@ -18,12 +11,32 @@ export interface ITagDB{
     tag: string
 }
 
+interface Tag{
+    tag: string | []
+}
+
+export interface ITagInputJson {
+    tags: [] | {tag: string}
+}
+
+export interface ITagInputXml {
+    tags:{ tag: Tag }
+}
+
+export interface IProduct {
+    id: string,
+    name: string,
+    price: number,
+    description: string | null,
+    idUser: string
+}
+
 export interface IProductInputDTO {
     name: string,
     price: number,
     description: string | null,
     idUser: string,
-    tags: ITag[],
+    tags: any,
     token: string
 }
 
