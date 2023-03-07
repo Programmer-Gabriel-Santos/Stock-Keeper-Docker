@@ -1,5 +1,3 @@
-import * as xml2js from 'xml2js'
-
 
 export interface ITag {
     idProduct: string,

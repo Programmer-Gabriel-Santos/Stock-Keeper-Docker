@@ -6,10 +6,10 @@ const productsXml =`
 <products>
   <product>
     <id>1</id>
-    <name>Camiseta Feminina</name>
+    <name>Calça Feminina</name>
     <price>49.99</price>
-    <description>Camiseta de algodão com estampa floral</description>
-    <idUser>1234</idUser>
+    <description>Calça jeans azul claro</description>
+    <idUser>1212</idUser>
     <tags>
       <tag>Roupas</tag>
       <tag>Feminino</tag>
@@ -18,10 +18,10 @@ const productsXml =`
   </product>
   <product>
     <id>2</id>
-    <name>Tênis Esportivo</name>
+    <name>Tênis Feminino</name>
     <price>129.90</price>
     <description>Tênis para corrida com amortecimento de ar</description>
-    <idUser>5678</idUser>
+    <idUser>1212</idUser>
     <tags>
       <tag>Calçados</tag>
       <tag>Esportivo</tag>
@@ -30,34 +30,34 @@ const productsXml =`
   </product>
   <product>
     <id>3</id>
-    <name>Smartphone Android</name>
+    <name>Tablet Windows</name>
     <price>899.00</price>
-    <description>Smartphone com tela de 6 polegadas e câmera de 64MP</description>
-    <idUser>9012</idUser>
+    <description>Tablet com tela de 8 polegadas e câmera de 32MP</description>
+    <idUser>1212</idUser>
     <tags>
       <tag>Tecnologia</tag>
       <tag>Android</tag>
-      <tag>Celular</tag>
+      <tag>Tablet</tag>
     </tags>
   </product>
   <product>
     <id>4</id>
-    <name>Camisa Social Masculina</name>
+    <name>Camisa Social Feminina</name>
     <price>89.99</price>
     <description>Camisa social de manga longa com tecido respirável</description>
-    <idUser>3456</idUser>
+    <idUser>1212</idUser>
     <tags>
       <tag>Roupas</tag>
-      <tag>Masculino</tag>
+      <tag>Feminina</tag>
       <tag>Social</tag>
     </tags>
   </product>
   <product>
     <id>5</id>
-    <name>Óculos de Sol</name>
+    <name>Óculos de Sol Feminino</name>
     <price>69.90</price>
     <description>Óculos de sol com armação de acetato e lentes polarizadas</description>
-    <idUser>7890</idUser>
+    <idUser>1212</idUser>
     <tags>
       <tag>Acessórios</tag>
       <tag>Óculos</tag>
@@ -66,25 +66,25 @@ const productsXml =`
   </product>
   <product>
     <id>6</id>
-    <name>Caixa de Som Bluetooth</name>
+    <name>Relógio de pulso</name>
     <price>149.00</price>
-    <description>Caixa de som com conectividade Bluetooth e bateria recarregável</description>
-    <idUser>1234</idUser>
+    <description>Relógio de pulso a prova d'agua</description>
+    <idUser>1212</idUser>
     <tags>
       <tag>Tecnologia</tag>
-      <tag>Áudio</tag>
-      <tag>Bluetooth</tag>
+      <tag>Horas</tag>
+      <tag>Relógio</tag>
     </tags>
   </product>
   <product>
     <id>7</id>
-    <name>Shorts Masculino</name>
+    <name>Shorts Feminino</name>
     <price>59.99</price>
-    <description>Shorts masculino com estampa tropical</description>
-    <idUser>5678</idUser>
+    <description>Shorts feminino com estampa tropical</description>
+    <idUser>1212</idUser>
     <tags>
       <tag>Roupas</tag>
-      <tag>Masculino</tag>
+      <tag>Feminino</tag>
       <tag>Tropical</tag>
     </tags>
   </product>

@@ -5,9 +5,9 @@ import { userRouter } from './router/userRouter'
 import { productRouter } from './router/productRouter'
 import xmlparser from 'express-xml-bodyparser'
 import { Migrations } from './migrations/migrations'
-import knex, {Knex} from 'knex'
 
 const migrations = new Migrations()
+
 
 dotenv.config()
 

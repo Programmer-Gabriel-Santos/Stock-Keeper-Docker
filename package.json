@@ -1,13 +1,14 @@
 {
-  "name": "my-store",
+  "name": "my-store-inventory",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
     "dev": "ts-node-dev ./src/index.ts",
-    "build": "tsc ./src",
-    "start": "node ./build/src/index.ts"
+    "build": "tsc",
+    "start": "node build/index.js",
+    "migrations": "node ./build/migrations/migrations.js"
   },
   "keywords": [],
   "author": "",

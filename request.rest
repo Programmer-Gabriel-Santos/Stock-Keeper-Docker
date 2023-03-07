@@ -3,22 +3,22 @@ GET http://localhost:3003/user/teste
 
 ####
 
-POST http://localhost:3003/user/signup
+POST http://localhost:3008/user/signup
 Content-Type: application/json
 
 {   
     "name": "Gabriel",
-    "email": "gabriel3@gmail.com",
+    "email": "teste11@gmail.com",
     "password": "123456"
 }
 
 ####
 
-POST http://localhost:3003/user/login
+POST http://localhost:3008/user/login
 Content-Type: application/json
 
 {
-    "email": "gabriel2@gmail.com",
+    "email": "admin1@StockKeeper.com",
     "password": "123456"
 }
 
@@ -26,9 +26,9 @@ Content-Type: application/json
 
 # Requisição com json
 
-POST http://localhost:3003/product/add
+POST http://localhost:3008/product/add
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliZTA2MjBjLWVjMDItNGJmMy05ZDgxLWMyNDRmYzVhNDNjMyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3ODEwNTk2MiwiZXhwIjoxNjc4MTkyMzYyfQ.yvedQXaV6suCluvR06xbqQfc46gI4O3Ock3bsv75x-0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMTIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzgyMzE5MjAsImV4cCI6MTY3ODMxODMyMH0.q0MnaKb7j5_YLIs3YpAWR72dMdW1nVWWW1xCyNbmYaA
 
 {
     "product": {
@@ -36,7 +36,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliZTA2MjBjLWVjMDIt
         "name": "Camiseta Masculina",
         "price": 49.99,
         "description": "Camiseta de seda com estampa floral",
-        "idUser": "9be0620c-ec02-4bf3-9d81-c244fc5a43c3",
+        "idUser": "1212",
         "tags": [
             {"tag": "Roupas"},
             {"tag":"Feminino"},
@@ -50,7 +50,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliZTA2MjBjLWVjMDIt
 
 POST http://localhost:3003/product/add
 Content-Type: text/xml
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliZTA2MjBjLWVjMDItNGJmMy05ZDgxLWMyNDRmYzVhNDNjMyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3ODEwNTk2MiwiZXhwIjoxNjc4MTkyMzYyfQ.yvedQXaV6suCluvR06xbqQfc46gI4O3Ock3bsv75x-0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..yvedQXaV6suCluvR06xbqQfc46gI4O3Ock3bsv75x-0
 
 
 
@@ -61,7 +61,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliZTA2MjBjLWVjMDIt
     <name>Camiseta Feminina de manga longa</name>
     <price>49.99</price>
     <description>Camiseta de algodão com estampa floral</description>
-    <idUser>9be0620c-ec02-4bf3-9d81-c244fc5a43c3</idUser>
+    <idUser>f9cbf278-46d2-4642-930f-a351942f361f</idUser>
     <tags>
         <tag>Roupas</tag>
         <tag>Feminino</tag>

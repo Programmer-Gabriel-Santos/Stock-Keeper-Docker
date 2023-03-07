@@ -9,6 +9,8 @@ class BaseDataBase {
     private connetion: Knex | null = null;
 
     protected getConnection() {
+        const DB_PORT = Number(process.env.DB_PORT)
+        
         if (!this.connetion) {
             this.connetion = knex({
                 client: "mysql2",
@@ -17,7 +19,7 @@ class BaseDataBase {
                     user: process.env.DB_USER,
                     database: process.env.DB_DATABASE,
                     password: process.env.DB_PASSWORD,
-                    port: 3306
+                    port: DB_PORT,
                 }
             })
         }
