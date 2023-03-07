@@ -20,13 +20,20 @@ export class ProductController {
             }
             const response = await this.productRules.createProduct(input)
 
-            res.send({message: response})
-            
+            res.send({ message: response })
+
         } catch (error: unknown) {
             if (error instanceof BaseError) {
                 res.status(400).send({ message: error.message })
             } else {
-                res.status(500).send({ message: "Um erro inesperado ocorreu :/" })
+                console.log(error)
+                res.status(500).send(
+                    {
+                        message: "Um erro inesperado ocorreu :/",
+                        suggestion: `Cerfifique-se de haver um banco de dados com as configurações de conexão, que 
+                        podem ser encontradas no arquivo .env e no docker-compose.yml. Verifique se o id do usuário está correto.`
+                    }
+                )
             }
         }
 

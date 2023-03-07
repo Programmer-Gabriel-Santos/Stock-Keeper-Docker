@@ -5,7 +5,7 @@ const data = {
         name: "Camiseta Feminina",
         price: "49.99",
         description: "Camiseta de algodão com estampa floral",
-        idUser: "1234",
+        idUser: "1212",
         tags: ["Roupas", "Feminino", "Verão"]
       },
       {
@@ -13,7 +13,7 @@ const data = {
         name: "Tênis Esportivo",
         price: "129.90",
         description: "Tênis para corrida com amortecimento de ar",
-        idUser: "5678",
+        idUser: "1212",
         tags: ["Calçados", "Esportivo", "Corrida"]
       },
       {
@@ -21,7 +21,7 @@ const data = {
         name: "Smartphone Android",
         price: "899.00",
         description: "Smartphone com tela de 6 polegadas e câmera de 64MP",
-        idUser: "9012",
+        idUser: "1212",
         tags: ["Tecnologia", "Android", "Celular"]
       },
       {
@@ -29,7 +29,7 @@ const data = {
         name: "Camisa Social Masculina",
         price: "89.99",
         description: "Camisa social de manga longa com tecido respirável",
-        idUser: "3456",
+        idUser: "1212",
         tags: ["Roupas", "Masculino", "Social"]
       },
       {
@@ -37,7 +37,7 @@ const data = {
         name: "Óculos de Sol",
         price: "69.90",
         description: "Óculos de sol com armação de acetato e lentes polarizadas",
-        idUser: "7890",
+        idUser: "1212",
         tags: ["Acessórios", "Óculos", "Sol"]
       },
       {
@@ -45,7 +45,7 @@ const data = {
         name: "Caixa de Som Bluetooth",
         price: "149.00",
         description: "Caixa de som com conectividade Bluetooth e bateria recarregável",
-        idUser: "1234",
+        idUser: "1212",
         tags: ["Tecnologia", "Áudio", "Bluetooth"]
       },
       {
@@ -53,7 +53,7 @@ const data = {
         name: "Shorts Masculino",
         price: "59.99",
         description: "Shorts masculino com estampa tropical",
-        idUser: "5678",
+        idUser: "1212",
         tags: ["Roupas", "Masculino", "Tropical"]
       }
     ]

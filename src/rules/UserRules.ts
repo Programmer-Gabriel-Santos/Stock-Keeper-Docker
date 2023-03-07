@@ -7,11 +7,11 @@ import { LoginInputDTO, LoginOutputDTO, SignupInputDTO, SignupOutputDTO, User, U
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
 import { IdGenerator } from "../services/IdGenerator"
+import { IsEmailExist } from '../errors/IsEmailExist'
 import { IdGeneratorMock } from '../../tests/Mocks/servicesMock/idGeneratorMock'
 import { UserDataBaseMock } from '../../tests/Mocks/UserDataBaseMock/UserDataBaseMock'
 import { HashManagerMock } from '../../tests/Mocks/servicesMock/HashManagerMock'
 import { AuthenticatorMock } from '../../tests/Mocks/servicesMock/AuthenticatorMock'
-import { IsEmailExist } from '../errors/IsEmailExist'
 
 export class UserRules {
     constructor(
@@ -141,5 +141,4 @@ export class UserRules {
 
         return response
     }
-
 }

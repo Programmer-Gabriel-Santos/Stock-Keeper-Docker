@@ -1,0 +1,55 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: db-stock
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - netStock
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: StockKeeper
+    ports:
+      - 3007:3306
+    restart: always
+
+  app:
+    image: gabrieldeveloperfull/my_projects:latest
+    container_name: app-stock
+    ports:
+      - 3008:3003
+    networks:
+      - netStock
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_DATABASE: StockKeeper
+      DB_PASSWORD: root
+      DB_PORT: 3306
+      JWT_KEY: ajsuegdtchbsm
+      JWT_EXPIRES_IN: 24h
+      BCRYPT_SALT_ROUNDS: 12
+      PORT: 3003
+    restart: always
+
+  adminer:
+    image: adminer
+    container_name: adm-stock
+    depends_on: 
+      - db 
+    ports:
+      - 3009:8080
+    networks:
+      - netStock 
+    restart: always
+
+volumes:
+  dbdata: 
+
+networks:
+  netStock:
+    driver: bridge    

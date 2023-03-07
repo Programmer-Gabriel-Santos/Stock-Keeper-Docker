@@ -23,6 +23,7 @@ export class UserController {
             if (error instanceof Error) {
                 res.status(400).send({ message: error.message })
             } else {
+                console.log(error)
                 res.status(500).send({ message: "Um erro inesperado ocorreu :/" })
             }
         }
@@ -40,6 +41,7 @@ export class UserController {
             res.send(response)
 
         } catch (error: unknown) {
+            console.log(error)
             if (error instanceof Error) {
                 res.status(400).send({ message: error.message })
             } else {
