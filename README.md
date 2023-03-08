@@ -27,6 +27,10 @@ Esse projeto está sendo desenvolvido para fins de aprendizado e desenvolmimento
 - MySql
 - POO
 
+
+##### Resultado dos testes utilizando Jest
+
+
 ...
 ### Como rodar a aplicação
 
