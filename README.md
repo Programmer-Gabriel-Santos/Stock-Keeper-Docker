@@ -30,6 +30,7 @@ Esse projeto está sendo desenvolvido para fins de aprendizado e desenvolmimento
 
 ##### Resultado dos testes utilizando Jest
 
+<img src="https://user-images.githubusercontent.com/104647293/223827579-926050b4-8c82-4ef0-9869-a9353788f5d7.png" max-width="900px"/>
 
 ...
 ### Como rodar a aplicação
@@ -46,9 +47,11 @@ Esse projeto está sendo desenvolvido para fins de aprendizado e desenvolmimento
    <p>Assim que o banco de dados estiver online, a aplicação criará as tabelas nescessárias e o usuário com permissão para inserir produtos no bando. A documentação de rotas e exemplos de requisições podem ser encontradas <a href="https://documenter.getpostman.com/view/21555755/2s93JqSkAT#intro">aqui</a>.</p>
 </details>
 
-##### observações
+Arquivo contendo produtos para serem adcionados ao banco: 
 
-O projeto tem como objetivo principal desenvolver uma aplicação utilizando o dokcer-compose, por isso constam poucas opções de requisições. Porém, neste reporitório há outros projetos com mais recursos testáveis e manipulação de banco dedados.
+##### Observações
+
+O projeto tem como objetivo principal desenvolver uma aplicação utilizando o dokcer-compose, por isso constam poucas opções de requisições. Porém, neste reporitório há outros projetos com mais recursos testáveis e manipulação de banco de dados.
 
 Por isso é recomendado utilizar a conta padrão criada junto com a aplicação para fazer testes, se quiser criar mais contas para adicionar produtos, use o adminer para obter o id do usuário criado, você precisará dele para inserir produtos no banco, você também pode usar o administrador de banco de dados de sua preferência.
 
@@ -59,4 +62,3 @@ Aqui vai um exemplo de como utilizar o adminer: acesse o localhost:3009 de seu n
 
 
 Siga os modelos de requisições que constam na documentação para evitar problemas.
-...
