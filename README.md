@@ -48,7 +48,9 @@ O projeto tem como objetivo principal desenvolver uma aplicação utilizando o d
 
 Por isso é recomendado utilizar a conta padrão criada junto com a aplicação para fazer testes, se quiser criar mais contas para adicionar produtos, use o adminer para obter o id do usuário criado, você precisará dele para inserir produtos no banco, você também pode usar o administrador de banco de dados de sua preferência.
 
-Aqui vai um exemplo de como utilizar o adminer: acesse o localhost:3009 de seu navegador e insira os dados como na imagem
+Aqui vai um exemplo de como utilizar o adminer: acesse o localhost:3009 de seu navegador e insira os dados como na imagem abaixo
+
+<img src="https://user-images.githubusercontent.com/104647293/223822416-e194c187-bc27-4e46-bc7a-d78f667e378a.png" width="600px"/>
 
 
 
