@@ -1,14 +1,15 @@
 
-GET http://localhost:3003/user/teste
 
-####
+### OBS: é recomendado usar a conta criada a partir da criação do container
+### pois tem um id padrão que é: 1212, você precisará desse id para inserir produtos no banco.
+### se quiser usar qualquer conta além dessa, acesse o banco de dados para pegar o id do usuário.
 
 POST http://localhost:3008/user/signup
 Content-Type: application/json
 
 {   
-    "name": "Gabriel",
-    "email": "teste11@gmail.com",
+    "name": "admin1",
+    "email": "admin1@StockKeeper.com",
     "password": "123456"
 }
 
@@ -57,11 +58,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..yvedQXaV6suCluvR06xbqQfc46g
 <?xml version="1.0" encoding="UTF-8"?>
 
 <product>
-    <id>1</id>
+    <id>2</id>
     <name>Camiseta Feminina de manga longa</name>
     <price>49.99</price>
     <description>Camiseta de algodão com estampa floral</description>
-    <idUser>f9cbf278-46d2-4642-930f-a351942f361f</idUser>
+    <idUser>1212</idUser>
     <tags>
         <tag>Roupas</tag>
         <tag>Feminino</tag>
