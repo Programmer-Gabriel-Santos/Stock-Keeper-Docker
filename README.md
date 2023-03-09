@@ -35,8 +35,7 @@ Esse projeto está sendo desenvolvido para fins de aprendizado e desenvolmimento
 ...
 ### Como rodar a aplicação
 
-<details>
-   <summary>Rodar a aplicação com Docker-Compose</summary>
+
    <p>
       Você precisa ter o <a href="https://docs.docker.com/engine/install/" target="_blank" >Docker</a> e o <a                                              href="https://docs.docker.com/compose/install/" target="_blank" >Docker-Compose</a> instalados em sua máquina.
    </p>
@@ -46,7 +45,6 @@ Esse projeto está sendo desenvolvido para fins de aprendizado e desenvolmimento
    <p>Serão criados três containers. O banco de dados Mysql rodando na porta 3007, o servidor rodando na porta 3008 e o gerenciador de banco de dados adminer na porta 3009. Certifique-se de que essas postas estão livres em seu host ou mude as portas definidas do docker-compose antes de criar os containers.</p>
    <p>Assim que o banco de dados estiver online, a aplicação criará as tabelas nescessárias e o usuário com permissão para inserir produtos no bando. A documentação de rotas e exemplos de requisições podem ser encontradas <a href="https://documenter.getpostman.com/view/21555755/2s93JqSkAT#intro">aqui</a>.</p>
   Arquivo contendo produtos para serem adcionados ao banco: <a href="https://github.com/Programmer-Gabriel-Santos/Stock-Keeper-Docker/blob/master/src/data/products-json.ts" target="_blank"> em json</a> e em <a href="https://github.com/Programmer-Gabriel-Santos/Stock-Keeper-Docker/blob/master/src/data/products-xml.ts" target="_blank">xml<a/>.
-</details>
 
 
 
