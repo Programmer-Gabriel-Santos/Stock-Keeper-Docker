@@ -50,7 +50,7 @@ Esse projeto está sendo desenvolvido para fins de aprendizado e desenvolmimento
 
 ##### Observações
 
-O projeto tem como objetivo principal desenvolver uma aplicação utilizando o dokcer-compose, por isso constam poucas opções de requisições. Porém, neste reporitório há outros projetos com mais recursos testáveis e manipulação de banco de dados.
+O projeto tem como objetivo principal desenvolver uma aplicação utilizando o dokcer-compose, por isso constam poucas opções de requisições. Porém, neste repositório há outros projetos com mais recursos testáveis com manipulação de banco de dados.
 
 Por isso é recomendado utilizar a conta padrão criada junto com a aplicação para fazer testes, se quiser criar mais contas para adicionar produtos, use o adminer para obter o id do usuário criado, você precisará dele para inserir produtos no banco, você também pode usar o administrador de banco de dados de sua preferência.
 
